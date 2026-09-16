@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TikTok login – Pip &amp; Particle Publisher</title>
+<style>body{font-family:system-ui,sans-serif;max-width:640px;margin:3rem auto;padding:0 1rem;line-height:1.5;color:#222}
+textarea{width:100%;height:5rem;font-family:monospace;font-size:14px}button{padding:.5rem 1rem;font-size:1rem}</style></head>
+<body><h1>TikTok authorization received</h1>
+<p id="msg">Copy the code below and paste it into <code>auth_tiktok.py</code>.</p>
+<textarea id="code" readonly></textarea><br><br>
+<button onclick="navigator.clipboard.writeText(document.getElementById('code').value)">Copy code</button>
+<script>
+var q=new URLSearchParams(location.search),c=q.get('code'),e=q.get('error');
+document.getElementById('code').value=c||'';
+if(e){document.getElementById('msg').textContent='TikTok returned an error: '+e+' - '+(q.get('error_description')||'');}
+else if(!c){document.getElementById('msg').textContent='No code in the URL. Start again from auth_tiktok.py.';}
+</script></body></html>
