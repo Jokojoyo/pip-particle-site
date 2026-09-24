@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pip &amp; Particle Publisher | How our videos get published</title>
+<meta name="description" content="Pip &amp; Particle Publisher is the private scheduling tool that posts Pip &amp; Particle's own videos to TikTok, YouTube, Instagram and Facebook.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#002070">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pip &amp; Particle Publisher">
+<meta property="og:description" content="The scheduling tool behind Pip &amp; Particle's science stories.">
+<meta property="og:url" content="https://jokojoyo.github.io/pip-particle-site/publisher.html">
+<meta property="og:image" content="https://jokojoyo.github.io/pip-particle-site/og-image.jpg">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-row">
+    <a class="brand" href="index.html"><img src="icon-192.png" alt="" width="42" height="42"><span>Pip &amp; Particle</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html#stories">Stories</a>
+      <a href="index.html#meet">Meet Pip</a>
+      <a href="publisher.html" aria-current="page">Publisher</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="container section">
+    <h1>Pip &amp; Particle Publisher</h1>
+    <p class="lead">The scheduler our team uses to post each finished story to TikTok, YouTube, Instagram and Facebook on time.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#how">How it works</a>
+      <a class="btn btn-ghost" href="#tiktok">TikTok integration</a>
+    </div>
+    <figure class="shot">
+      <img src="shot-tiktok-post.png" width="1600" height="406" alt="The Publisher in a terminal window. It shows the connected TikTok account, the caption, the privacy options TikTok allows, the comment, Duet and Stitch settings, the commercial content and AI-generated questions, and TikTok's Music Usage Confirmation before posting.">
+      <figcaption>A test post from the Publisher: the creator reviews each TikTok setting, then agrees to TikTok's Music Usage Confirmation before anything is posted.</figcaption>
+    </figure>
+  </section>
+
+  <section id="how" class="container section">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Plan</h3>
+        <p>Every video gets a row in our content calendar: the date, a morning or afternoon slot, and a status.</p>
+        <table class="calendar">
+          <thead><tr><th scope="col">Date</th><th scope="col">Slot</th><th scope="col">Story</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td>24 Sep</td><td>Morning</td><td>How do atoms build new materials?</td><td><span class="status status--done">Published</span></td></tr>
+            <tr><td>24 Sep</td><td>Afternoon</td><td>How did books become easier to make?</td><td><span class="status status--done">Published</span></td></tr>
+            <tr><td>25 Sep</td><td>Morning</td><td>How do living things make light?</td><td><span class="status status--ready">Ready</span></td></tr>
+            <tr><td>25 Sep</td><td>Afternoon</td><td>How do crystals grow their neat shapes?</td><td><span class="status status--ready">Ready</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="step">
+        <h3>Write</h3>
+        <p>Each platform gets its own title, caption and hashtags, kept in a small text file next to the video. This is the YouTube file for 25 September:</p>
+<pre class="pack"><b>title:</b> How Do Crystals Grow Their Neat Shapes? | Science Story for Kids
+<b>tags:</b> crystals, salt, chemistry, geology, patterns, science for kids
+
+Atoms stack in the same repeating pattern over and over, so the flat faces and sharp corners appear all by themselves as the crystal grows.
+
+Try it: look closely at a grain of salt - it is a tiny cube.
+
+#pipandparticle #crystals #salt #shorts</pre>
+      </div>
+      <div class="step">
+        <h3>Connect</h3>
+        <p>Each account is connected once through the platform's own sign-in: Sign in with TikTok, Google for YouTube, and Meta for Instagram and Facebook. The Publisher never sees or stores a password.</p>
+      </div>
+      <div class="step">
+        <h3>Publish</h3>
+        <p>At the planned time the Publisher uploads the video through each platform's official API, records the result and flags anything that needs a person. If the computer was off, a late post is held back instead of going out at the wrong hour.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tiktok" class="container section">
+    <h2>The TikTok integration</h2>
+    <p class="lead">The Publisher uses TikTok's official Login Kit and Content Posting API (Direct Post). It posts only to the TikTok account that signed in, which is the Pip &amp; Particle account.</p>
+    <h3>What the creator decides for every TikTok post</h3>
+    <ul class="checks">
+      <li><strong>Posting account</strong><span>The Publisher shows the connected TikTok account, with its display name, before anything is posted.</span></li>
+      <li><strong>Who can view</strong><span>Chosen from the privacy options TikTok returns for that account.</span></li>
+      <li><strong>Comments, Duet and Stitch</strong><span>Each can be allowed or turned off. Anything disabled in the creator's TikTok settings stays off.</span></li>
+      <li><strong>Commercial content</strong><span>The creator discloses whether a video promotes their own brand, a paid partner, or neither.</span></li>
+      <li><strong>AI-generated label</strong><span>Applied when a video contains AI-generated content.</span></li>
+      <li><strong>Music Usage Confirmation</strong><span>The creator agrees to TikTok's Music Usage Confirmation before the video is published.</span></li>
+    </ul>
+    <p class="muted mt-sm">These choices are made per video, either on screen at posting time or ahead of time in the video's post file, and can be changed until the video goes out.</p>
+
+    <h3 class="mt-lg">Permissions requested</h3>
+    <div class="scopes">
+      <div class="scope"><code>user.info.basic</code><p>Shows which account is connected: display name and profile picture.</p></div>
+      <div class="scope"><code>video.publish</code><p>Posts the finished video directly to the connected account.</p></div>
+      <div class="scope"><code>video.upload</code><p>Included with TikTok's Content Posting API. The Publisher only posts finished videos and does not create drafts.</p></div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <h2>What it stores</h2>
+    <p>The Publisher runs on our own computer. It keeps the sign-in tokens for our own accounts, our video files and our captions. It collects nothing about viewers or anyone else, and it has no analytics or advertising.</p>
+    <p>Access can be removed at any time in each platform's app settings. The full details are in our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="note">
+      <p><strong>A private tool.</strong> The Publisher is used only by the Pip &amp; Particle team. There is no public sign-up, and this website has no login page.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-row">
+      <div>
+        <a class="brand" href="index.html"><img src="icon-192.png" alt="" width="42" height="42"><span>Pip &amp; Particle</span></a>
+        <p class="muted">Short science stories for curious kids, and the small tool that publishes them.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html#stories">Stories</a></li>
+          <li><a href="index.html#meet">Meet Pip</a></li>
+          <li><a href="publisher.html">Publisher</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Pip &amp; Particle</p>
+  </div>
+</footer>
+</body>
+</html>
